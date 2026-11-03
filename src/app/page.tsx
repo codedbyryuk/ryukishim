@@ -14,6 +14,8 @@ export default function Home() {
         <LandingHero />
         <Heading heading="01 - A little about me "/>
         <About/>
+        <Heading heading="02 - My sketchbook "/>
+
       </div>
 
 

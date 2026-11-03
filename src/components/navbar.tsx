@@ -1,5 +1,5 @@
 "use client"
-
+import  {RefreshCcw}  from "lucide-react"
 export function Navbar(){
     
     return(<>
@@ -8,7 +8,7 @@ export function Navbar(){
             <ul className="flex  justify-evenly text-black">
                 <li>SOMETHING</li>
                 <li>TIME</li>
-                <li>SOMETHING</li>
+                <li className="flex gap-2">Switch<RefreshCcw/></li>
             </ul>
         </nav>
     

@@ -1,11 +1,14 @@
 import { Badge } from "@/components/ui/badge"
+import { SlidingPuzzle } from "./SlidingPuzzle";
 
-const level = ["default","outline","secondary","destructive"] as const;
+const level = ["default", "outline", "secondary", "destructive"] as const;
 
 
 const obsessions = [
-    { obession: "Software", badge: "A lot", level: level[0] },
-    {obsession:"Guitar",badge:"Learning",level:level[1]},
+    { obsession: "Software", badge: "A lot", level: level[0], description: "Building software, games, anything that comes to my mind." },
+    { obsession: "Guitar", badge: "Learning", level: level[2],description:"Playing guitar, discovering music and occasionally getting stuck on one song." },
+    { obsession: "Drawing", badge: "A lot", level: level[0],description:"Making sketches, discovering new things to draw, learning new styles." },
+    { obsession: "Reading", badge: "At free time", level: level[1],description:"Reading murder mystery novels." },
 ]
 
 export function About() {
@@ -18,21 +21,24 @@ export function About() {
             </div>
             <div className="flex">
                 <div className="border-black flex-1 border-1 p-5">
-                    <h3 className="text-[1.4rem] font-Sans-DM text-black/50 uppercase">current obsessions</h3>
+                    <h3 className="text-[1.4rem] font-Sans-DM text-black/50 uppercase mb-4">current obsessions</h3>
                     <ul className="font-mono text-base md:text-lg">
                         {obsessions.map((row) => (
                             <li
-                                key={row.obession}
+                                key={row.obsession}
                                 className="flex justify-between gap-6 border-t border-black py-4 last:border-b"
                             >
-                                <span className="text-black/50">{row.obession}</span>
-                                <Badge variant={row.level} className="text-right text-white">{row.badge}</Badge>
+                                <div className="flex flex-col gap-2">
+                                    <span className="text-black/60 text-[1.4rem] font-bold">{row.obsession}</span>
+                                    <span className="text-black/60">{row.description}</span>
+                                </div>
+                                <Badge variant={row.level} className="text-right text-black/90 text-[0.9rem]">{row.badge}</Badge>
                             </li>
                         ))}
                     </ul>
                 </div>
                 <div className="border-black flex-1 border-1 p-5">
-
+                        <SlidingPuzzle image="/photos/art1.jfif" />
                 </div>
 
             </div>
