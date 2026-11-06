@@ -56,10 +56,45 @@
   font-family: 'DMSans';
   src: url('/fonts/DMSans.ttf') format('truetype');
 }
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url('/fonts/SpaceGrotesk.ttf') format('truetype');
+}
+@font-face {
+  font-family: "ArchivoBlack";
+  src: url('/fonts/ArchivoBlack.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Energo";
+  src: url('/fonts/Energo.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Paceon";
+  src: url('/fonts/Paceon.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Player2";
+  src: url('/fonts/Player2.otf') format('truetype');
+}
+@font-face {
+  font-family: "RasterForge";
+  src: url('/fonts/RasterForgeRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "PixelifySans";
+  src: url('/fonts/PixelifySans.ttf') format('truetype');
+}
 
 @theme {
   --font-Futura-EB: 'FuturaEB', sans-serif;
   --font-Sans-DM: 'DMSans',sans-serif;
+  --font-SpaceGrotesk: 'SpaceGrotesk',sans-serif;
+  --font-ArchivoBlack: 'ArchivoBlack',sans-serif;
+  --font-Energo: 'Energo',sans-serif;
+  --font-Paceon: 'Paceon',sans-serif;
+  --font-Player2: 'Player2',sans-serif;
+  --font-RasterForge: 'RasterForge',sans-serif;
+  --font-PixelifySans: 'PixelifySans',sans-serif;
 }
 
 :root {

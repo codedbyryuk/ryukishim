@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -9,14 +8,35 @@ const sections = [
     { name: "About", id: "about" },
     { name: "Drawings", id: "drawings" },
     { name: "Music", id: "music" },
+    { name: "Bookshelf", id: "bookshelf" },
+    { name: "Contact", id: "contact" },
 ];
 
-export function Navbar() {
+const themes = {
+    personal: {
+        nav: "bg-[#e9ecef] text-black border-black",
+        link: "text-black/60 hover:text-black",
+    },
+    developer: {
+        nav: "bg-[#affc41] text-[#060606] border-[#060606]",
+        link: "text-[#060606]/60 hover:text-[#060606]",
+    },
+};
+
+interface NavProps {
+    mode: string;
+    onSwitch: () => void;
+}
+
+export function Navbar({ mode, onSwitch }: NavProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const theme = mode === "personal" ? themes.personal : themes.developer;
 
     return (
-        <nav className="w-full sticky top-0 z-50 bg-[#e9ecef] px-5 border-b-3 border-black py-5">
-            <ul className="flex justify-evenly items-center text-black">
+        <nav
+            className={`w-full sticky top-0 z-50 px-5 border-b-3 py-5 transition-colors duration-300 ${theme.nav}`}
+        >
+            <ul className="flex justify-evenly items-center">
 
                 <li>
                     <button
@@ -35,8 +55,14 @@ export function Navbar() {
 
                 <li>TIME</li>
 
-                <li className="flex gap-2 cursor-pointer">
-                    Switch <RefreshCcw />
+                <li>
+                    <button
+                        onClick={onSwitch}
+                        className="flex gap-2 cursor-pointer"
+                    >
+                        {mode === "personal" ? "Developer" : "Personal"}
+                        <RefreshCcw />
+                    </button>
                 </li>
 
             </ul>
@@ -63,7 +89,7 @@ export function Navbar() {
                                         delay: index * 0.06,
                                     }}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-black/60 hover:text-black transition-colors"
+                                    className={`transition-colors ${theme.link}`}
                                 >
                                     {section.name}
                                 </motion.a>
