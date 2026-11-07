@@ -177,7 +177,7 @@ export function LandingHero() {
     const r = useTransform(size, (s) => Math.max(s, 0.01));
 
 
-    const revealMask = useMotionTemplate`radial-gradient(circle ${r}px at ${x}px ${y}px, black 94%, transparent 100%)`;
+    const revealMask = useMotionTemplate`radial-gradient(circle ${r}px at ${x}px ${y}px, black 100%, transparent 100%)`;
     
     const baseMask = useMotionTemplate`radial-gradient(circle ${r}px at ${x}px ${y}px, transparent 94%, black 100%)`;
 

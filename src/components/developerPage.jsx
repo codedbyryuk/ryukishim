@@ -3,6 +3,8 @@ import { Heading } from "@/components/header";
 import { Contact } from "@/sections/codedbyryukMode/contact";
 import { LandingHero } from "@/sections/codedbyryukMode/landingHero";
 import { Projects } from "@/sections/codedbyryukMode/projects";
+import { Repos } from "@/sections/codedbyryukMode/repos";
+import { Stack } from "@/sections/codedbyryukMode/stack";
 
 
 
@@ -19,8 +21,13 @@ export function Codedbyryuk() {
                     <About />
                     <Heading heading="02 - Projects i have built"/>
                     <Projects/>
+                    <Heading heading="03 - My repository"/>
+                    <Repos/>
+                    <Heading heading="04 - My stack"/>
+                    <Stack/>
                     <Heading heading="05 - Find me else where" />
                     <Contact />
+                    
                 </div>
             </main>
         </>

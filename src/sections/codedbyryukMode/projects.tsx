@@ -167,8 +167,8 @@ export function Projects() {
         <section id="projects" className="w-full py-6 px-4 md:px-10 flex flex-col gap-8 border-b-3 border-b-black">
             <div className="flex flex-col gap-5">
                 <div className="flex items-baseline gap-4">
-                    <h2 className="text-[3rem] font-Pixelify-Sans font-bold text-black">Projects</h2>
-                    <span className="font-Pixelify-Sans text-base text-black/60">{filtered.length}</span>
+                    <h2 className="text-[3rem] font-PixelifySans font-bold text-black">Projects</h2>
+                    <span className="font-PixelifySans text-base text-black/60">{filtered.length}</span>
                 </div>
 
                 <div className="flex flex-wrap gap-2">

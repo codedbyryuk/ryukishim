@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge"
+import { Terminal } from "./terminal";
 
 
 const level = ["default", "outline", "secondary", "destructive"] as const;
@@ -12,10 +13,10 @@ const badgeStyles: Record<(typeof level)[number], string> = {
 
 
 const obsessions = [
-    { obsession: "Software", badge: "A lot", level: level[0], description: "Building software, games, anything that comes to my mind." },
-    { obsession: "Guitar", badge: "Learning", level: level[2],description:"Playing guitar, discovering music and occasionally getting stuck on one song." },
-    { obsession: "Drawing", badge: "A lot", level: level[0],description:"Making sketches, discovering new things to draw, learning new styles." },
-    { obsession: "Reading", badge: "At free time", level: level[1],description:"Reading murder mystery novels." },
+    { obsession: "Web development", badge: "A lot", level: level[0], description: "Building interfaces that feel alive, mostly in React and Next.js." },
+    { obsession: "Game development", badge: "A lot", level: level[0], description: "Small games and prototypes, usually rebuilt at least once." },
+    { obsession: "UI and motion", badge: "A lot", level: level[0], description: "Hover states, easing curves, and details most people never notice." },
+    { obsession: "Rewriting my code", badge: "Always", level: level[2], description: "Rewriting things I finished last week because I know I can do better." },
 ]
 
 export function About() {
@@ -23,7 +24,7 @@ export function About() {
         <div className="w-full py-6 px-10 flex gap-10 flex-col border-b-3 border-b-[#000] h-full">
             <div>
                 <h3 className="text-[2.4rem] font-Sans-DM text-[#000]/90">Hello, I'm Fahim.</h3>
-                <h2 className="text-[3rem] font-Pixelify-Sans font-bold text-[#000]">I enjoy building software, experimenting with ideas, and turning random thoughts into actual projects.</h2>
+                <h2 className="text-[3rem] font-PixelifySans font-bold text-[#000]">I enjoy building software, experimenting with ideas, and turning random thoughts into actual projects.</h2>
                 <h3 className="text-[2.4rem] font-Sans-DM text-[#000]/90">Always learning, constantly tinkering, and probably already thinking about the next thing to build.</h3>
             </div>
             <div className="flex">
@@ -45,7 +46,7 @@ export function About() {
                     </ul>
                 </div>
                 <div className="border-[#000] flex-1 border-1 p-5">
-
+                        <Terminal/>
                 </div>
 
             </div>

@@ -11,8 +11,8 @@ import {
 
 
 const works = [
-    { title: 'Golden hour', year: '2026', image: '/photos/art2.jfif' },
-    { title: 'Canola field', year: '2026', image: '/photos/art1.jfif' },
+    { title: 'Golden hour', year: '2026', image: '/projects/clicraft.png' },
+    { title: 'Canola field', year: '2026', image: '/projects/pokemonbidwars.png' },
     { title: 'The pier', year: '2025', image: '/photos/art3.jfif' },
     { title: 'Pink drift', year: '2025', image: '/photos/art4.jfif' },
     { title: 'd drift', year: '2025', image: '/photos/art5.jfif' },

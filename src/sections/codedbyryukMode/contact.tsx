@@ -52,7 +52,7 @@ export function Contact() {
     return (
         <section id="contact" className="w-full py-6 px-4 md:px-10 flex flex-col gap-8">
             <div>
-                <h2 className="text-[3rem] font-Pixelify-Sans font-bold text-black">Say hi.</h2>
+                <h2 className="text-[3rem] font-PixelifySans font-bold text-black">Say hi.</h2>
                 <h3 className="text-[1.6rem] font-Sans-DM text-black/80">
                     Got an idea, a drawing, or a song I should hear? I'd like to know.
                 </h3>
