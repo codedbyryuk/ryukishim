@@ -11,6 +11,13 @@ const sections = [
     { name: "Bookshelf", id: "bookshelf" },
     { name: "Contact", id: "contact" },
 ];
+const sections2 = [
+    { name: "About", id: "about" },
+    { name: "Projects", id: "projects" },
+    { name: "Repos", id: "repos" },
+    { name: "Stack", id: "stack" },
+    { name: "Contact", id: "contact" },
+]
 
 const themes = {
     personal: {
@@ -53,7 +60,7 @@ export function Navbar({ mode, onSwitch }: NavProps) {
                     </button>
                 </li>
 
-                <li>TIME</li>
+                <li> <img src={mode === "personal" ? "/logo1.svg" : "logo2.svg"} width="30" /> </li>
 
                 <li>
                     <button
@@ -77,23 +84,46 @@ export function Navbar({ mode, onSwitch }: NavProps) {
                         className="overflow-hidden"
                     >
                         <div className="flex justify-center gap-10 pt-6 pb-2">
-                            {sections.map((section, index) => (
-                                <motion.a
-                                    key={section.id}
-                                    href={`#${section.id}`}
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    transition={{
-                                        duration: 0.2,
-                                        delay: index * 0.06,
-                                    }}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`transition-colors ${theme.link}`}
-                                >
-                                    {section.name}
-                                </motion.a>
-                            ))}
+                            {mode === "personal" ? (
+                                
+                                    sections.map((section, index) => (
+                                        <motion.a
+                                            key={section.id}
+                                            href={`#${section.id}`}
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -10 }}
+                                            transition={{
+                                                duration: 0.2,
+                                                delay: index * 0.06,
+                                            }}
+                                            onClick={() => setIsOpen(false)}
+                                            className={`transition-colors ${theme.link}`}
+                                        >
+                                            {section.name}
+                                        </motion.a>
+                                    ))
+                                
+                            ): (
+                                sections2.map((section, index) => (
+                                        <motion.a
+                                            key={section.id}
+                                            href={`#${section.id}`}
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -10 }}
+                                            transition={{
+                                                duration: 0.2,
+                                                delay: index * 0.06,
+                                            }}
+                                            onClick={() => setIsOpen(false)}
+                                            className={`transition-colors ${theme.link}`}
+                                        >
+                                            {section.name}
+                                        </motion.a>
+                                    ))
+                            )}
+
                         </div>
                     </motion.div>
                 )}
